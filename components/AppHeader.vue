@@ -6,16 +6,16 @@
       <img src="assets/headerCircle.svg" class="absolute left-30 top-0 pointer-events-none" />
 
       <nav class="ml-auto flex gap-6">
+         <NuxtLink to="/" class="font-medium text-base relative group"
+            >HOME
+            <div class="absolute w-0.5 h-2 bg-text left-1/2 group-hover:block hidden"></div>
+            <div class="absolute mt-2 left-1/2 -translate-x-3 group-hover:block hidden">(H)</div>
+         </NuxtLink>
+
          <NuxtLink to="/projects" class="font-medium text-base relative group"
             >PROJECTS
             <div class="absolute w-0.5 h-2 bg-text left-1/2 group-hover:block hidden"></div>
             <div class="absolute mt-2 left-1/2 -translate-x-3 group-hover:block hidden">(P)</div>
-         </NuxtLink>
-
-         <NuxtLink to="/carrier" class="font-medium text-base relative group"
-            >CARRIER
-            <div class="absolute w-0.5 h-2 bg-text left-1/2 group-hover:block hidden"></div>
-            <div class="absolute mt-2 left-1/2 -translate-x-3 group-hover:block hidden">(C)</div>
          </NuxtLink>
 
          <NuxtLink to="/contact" class="font-medium text-base relative group"

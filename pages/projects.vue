@@ -47,7 +47,7 @@
          <Card class="!border-white w-full h-full">
             <div class="w-full h-full flex flex-col relative">
                <p class="font-light text-base">Contact me</p>
-               <img src="assets/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
+               <img src="assets/icons/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
 
                <p class="mt-auto font-bold text-6xl">
                   Is Your <br />
