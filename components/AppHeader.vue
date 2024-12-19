@@ -1,6 +1,8 @@
 <template>
    <Card class="font-extralight text-2xl overflow-clip flex gap-16 h-24 items-center">
-      <span> KAMIL <span class="font-medium">KUBICZEK</span> </span>
+      <NuxtLink to="/" class="h-full flex items-center">
+         <span>KAMIL</span> &nbsp;<span class="font-medium">KUBICZEK</span>
+      </NuxtLink>
       <img src="assets/headerCircle.svg" class="absolute left-30 top-0 pointer-events-none" />
 
       <nav class="ml-auto flex gap-6">

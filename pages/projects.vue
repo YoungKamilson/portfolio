@@ -43,20 +43,19 @@
          </template>
       </ProjectCard>
 
-      <Card class="col-span-4 row-span-5 !border-white cursor-pointer">
-         <div class="w-full h-full flex flex-col relative">
-            <p class="font-light text-base">
-               Successful <br />
-               cooperation
-            </p>
-            <img src="assets/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
+      <NuxtLink to="/contact" class="col-span-4 row-span-5">
+         <Card class="!border-white w-full h-full">
+            <div class="w-full h-full flex flex-col relative">
+               <p class="font-light text-base">Contact me</p>
+               <img src="assets/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
 
-            <p class="mt-auto font-bold text-6xl">
-               Is Your <br />
-               project next?
-            </p>
-         </div>
-      </Card>
+               <p class="mt-auto font-bold text-6xl">
+                  Is Your <br />
+                  project next here?
+               </p>
+            </div>
+         </Card>
+      </NuxtLink>
 
       <Socials class="col-span-4 row-span-2" />
    </main>

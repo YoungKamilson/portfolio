@@ -20,20 +20,22 @@
             <img src="assets/arrow.png" alt="Arrow" class="absolute top-0 right-0" />
          </div>
       </Card>
-      <Card class="col-span-4 row-span-6 !border-white cursor-pointer">
-         <div class="w-full h-full flex flex-col relative">
-            <p class="font-light text-base">
-               Successful <br />
-               cooperation
-            </p>
-            <img src="assets/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
+      <NuxtLink to="/contact" class="col-span-4 row-span-6">
+         <Card class="!border-white w-full h-full">
+            <div class="w-full h-full flex flex-col relative">
+               <p class="font-light text-base">
+                  Successful <br />
+                  cooperation
+               </p>
+               <img src="assets/arrow.png" alt="Arrow" class="absolute right-0 top-0" />
 
-            <p class="mt-auto font-bold text-6xl">
-               Hire or <br />
-               contact me
-            </p>
-         </div>
-      </Card>
+               <p class="mt-auto font-bold text-6xl">
+                  Hire or <br />
+                  contact me
+               </p>
+            </div>
+         </Card>
+      </NuxtLink>
       <Card class="col-span-4 row-span-6 flex flex-col">
          <p class="mt-auto font-bold text-5xl">About me</p>
          <p class="font-light text-xl mt-3">
