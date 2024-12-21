@@ -1,24 +1,103 @@
 <template>
    <main class="grid grid-cols-12 grid-rows-12 min-h-[90vh] mt-8 gap-8">
-      <Card class="col-span-5 row-span-8 flex flex-col gap-3 overflow-clip" id="icons-container">
-         <div class="flex gap-3 -rotate-12 h-24 items-center pointer-events-none translate-y-[50px]" id="icons">
-            <img src="/assets/icons/javascript.svg" alt="JavaScript" class="animated-icon" />
-            <img src="/assets/icons/ts.svg" alt="TypeScript" class="animated-icon" />
-            <img src="/assets/icons/vue.svg" alt="Vue 3" class="animated-icon" />
-            <img src="/assets/icons/Nuxt.svg" alt="Nuxt 3" class="animated-icon" />
-            <img src="/assets/icons/React.svg" alt="React" class="animated-icon" />
-            <img src="/assets/icons/html.svg" alt="Html" class="animated-icon" />
-            <img src="/assets/icons/css.svg" alt="CSS" class="animated-icon" />
-            <img src="/assets/icons/tailwind.svg" alt="Tailwind CSS" class="animated-icon" />
-            <img src="/assets/icons/sass.svg" alt="SASS" class="animated-icon" />
-            <img src="/assets/icons/trpc.svg" alt="Postgres" class="animated-icon" />
-            <img src="/assets/icons/bun.svg" alt="Postgres" class="animated-icon" />
-            <img src="/assets/icons/postgres.svg" alt="Postgres" class="animated-icon" />
-            <img src="/assets/icons/git.svg" alt="Git" class="animated-icon" />
-            <img src="/assets/icons/github.svg" alt="GitHub" class="animated-icon" />
-            <img src="/assets/icons/gitlab.svg" alt="GitLab" class="animated-icon" />
-            <img src="/assets/icons/docker.svg" alt="Docker" class="animated-icon" />
-            <img src="/assets/icons/azure.svg" alt="Azure" class="animated-icon" />
+      <Card class="col-span-5 row-span-8 flex flex-col gap-3 overflow-clip group" id="icons-container">
+         <div class="mt-10 relative">
+            <div class="flex pause w-max gap-4 h-24 absolute -left-16 items-center animate-marquee group-hover:run">
+               <div v-for="n in 4" class="flex gap-4">
+                  <img
+                     src="/assets/icons/javascript.svg"
+                     alt="JavaScript"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/ts.svg"
+                     alt="TypeScript"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/vue.svg"
+                     alt="Vue 3"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/Nuxt.svg"
+                     alt="Nuxt 3"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/React.svg"
+                     alt="React"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/html.svg"
+                     alt="Html"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/css.svg"
+                     alt="CSS"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/tailwind.svg"
+                     alt="Tailwind CSS"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/sass.svg"
+                     alt="SASS"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+               </div>
+            </div>
+
+            <div
+               class="flex pause w-max animate-marquee-reverse absolute top-28 left-[calc(100%+64px)] gap-4 h-24 items-center group-hover:run"
+            >
+               <div v-for="n in 4" class="flex gap-3">
+                  <img
+                     src="/assets/icons/git.svg"
+                     alt="Git"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/github.svg"
+                     alt="GitHub"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/gitlab.svg"
+                     alt="GitLab"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/docker.svg"
+                     alt="Docker"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/azure.svg"
+                     alt="Azure"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/trpc.svg"
+                     alt="Postgres"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/bun.svg"
+                     alt="Postgres"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/postgres.svg"
+                     alt="Postgres"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+               </div>
+            </div>
          </div>
 
          <p class="mt-auto font-bold text-6xl">
@@ -74,41 +153,49 @@ import gsap from "gsap"
 
 const { socials } = useAppConfig()
 
-const app = useNuxtApp()
+const { $gsap } = useNuxtApp()
 
-onMounted(() => {
-   if (import.meta.server) return
-   const box = document.querySelector("#icons-container")
-   const content = document.querySelector("#icons")
+// onMounted(() => {
+//    if (import.meta.server) return
+//    const box = document.querySelector("#icons-container")
+//    const content = document.querySelector("#icons")
+//    const icons = document.querySelectorAll(".animated-icon")
 
-   if (!box || !content) return
+//    if (!box || !content || !icons || !icons.length) return
 
-   box.addEventListener("mouseover", () => {
-      gsap.to(content, {
-         x: -1450,
-         y: 400,
-         duration: 1.5,
-         ease: "power2.inOut"
-      })
-   })
+//    const tl = gsap.timeline({
+//       yoyo: true,
+//       repeat: -1,
+//       paused: true
+//    })
 
-   box.addEventListener("mouseout", () => {
-      gsap.to(content, {
-         x: 0,
-         y: 50,
-         duration: 1,
-         ease: "power1.inOut"
-      })
-   })
-})
+//    tl.to(content, {
+//       x: content.scrollWidth * -1 * 0.7,
+//       duration: 5,
+//       ease: "sine"
+//    })
+
+//    box.addEventListener("mouseover", () => {
+//       tl.resume()
+//    })
+
+//    box.addEventListener("mouseout", () => {
+//       tl.pause()
+//    })
+
+//    icons.forEach((icon) => {
+//       const tl = gsap.timeline({
+//          scrollTrigger: {
+//             horizontal: true,
+//             trigger: content,
+//             start: "left center",
+//             end: "right center",
+//             scrub: true,
+//             markers: true
+//          }
+//       })
+
+//       tl.from(icon, { x: -100, scale: 0.5 }).to(icon, { x: 0, scale: 1 })
+//    })
+// })
 </script>
-
-<style scoped>
-.animated-icon {
-   width: 100px;
-   height: 100px;
-   display: block;
-   pointer-events: none;
-   position: relative;
-}
-</style>

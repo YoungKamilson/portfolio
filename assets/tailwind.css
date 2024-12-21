@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+   .run {
+      animation-play-state: running;
+   }
+   .pause {
+      animation-play-state: paused;
+   }
+}

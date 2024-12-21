@@ -2,11 +2,10 @@
 export default defineNuxtConfig({
    compatibilityDate: "2024-11-01",
    devtools: { enabled: true },
-   modules: [
-     "@nuxtjs/tailwindcss",
-     "@nuxtjs/google-fonts",
-     "nuxt-lucide-icons"
-   ],
+   build: {
+      transpile: ["gsap", "gsap/ScrollTrigger"]
+   },
+   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt-lucide-icons"],
    googleFonts: {
       families: {
          "Lexend Deca": {
@@ -15,6 +14,7 @@ export default defineNuxtConfig({
       }
    },
    tailwindcss: {
+      cssPath: "~/assets/tailwind.css",
       config: {
          theme: {
             extend: {
@@ -26,6 +26,23 @@ export default defineNuxtConfig({
                },
                fontFamily: {
                   LexendDeca: ["Lexend Deca", "serif"]
+               },
+               keyframes: {
+                  marquee: {
+                     "0%": { transform: "translateX(0%)" },
+                     "100%": { transform: "translateX(-100%)" }
+                  },
+                  "marquee-reverse": {
+                     "0%": { transform: "translateX(-100%)" },
+                     "100%": { transform: "translateX(0%)" }
+                  }
+               },
+               animation: {
+                  marquee: "marquee 100s linear infinite",
+                  "marquee-reverse": "marquee-reverse 100s linear infinite"
+               },
+               cursor: {
+                  hover: "url('~/assets/hover_cursor.svg'), auto"
                }
             }
          }
