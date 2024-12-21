@@ -106,7 +106,7 @@
          </div>
 
          <p class="mt-auto font-bold text-6xl">
-            Fullstack <br />
+            Fullstack web <br />
             developer
          </p>
       </Card>
@@ -115,15 +115,13 @@
             <p class="font-bold text-3xl">PORTRAIT</p>
          </div>
       </Card>
-      <a href="cv.pdf" class="col-span-4 row-span-11 cursor-clickt">
-         <Card class="w-full h-full">
+      <a href="cv.pdf" target="_blank" class="col-span-4 row-span-11 cursor-click">
+         <Card class="w-full h-full !border-white">
             <div class="relative w-full h-full">
                <p class="mt-auto font-bold text-2xl">My CV</p>
-               <!-- https://tympanus.net/codrops/2022/01/19/animate-anything-along-an-svg-path/ -->
-               <!-- https://www.google.com/search?q=path+animation+js&oq=path+animation+js&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB7SAQgxMzg3ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8 -->
-               <!-- https://www.youtube.com/watch?v=lj37QZ047f8 -->
                <img src="assets/icons/arrow.png" alt="Arrow" class="absolute top-0 right-0" />
             </div>
+            <IconsCarrier class="absolute top-0 right-0 w-full h-full" />
          </Card>
       </a>
       <NuxtLink to="/contact" class="col-span-4 row-span-6 cursor-click">

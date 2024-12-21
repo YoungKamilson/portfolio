@@ -23,7 +23,7 @@ const updateDotCursor = (ev: MouseEvent) => {
    gsap.to(cursor.value, {
       top: ev.pageY,
       left: ev.pageX,
-      scale: showHoverCursor.value ? 1.5 : 1,
+      scale: showHoverCursor.value ? 2 : 1,
       duration: 0.2,
       stagger: 0.4,
       ease: "power2.out"
@@ -32,7 +32,6 @@ const updateDotCursor = (ev: MouseEvent) => {
 
 const checkHoverState = (ev: MouseEvent) => {
    const hoveredElements = document.querySelectorAll(":hover")
-   console.log(hoveredElements)
 
    for (const element of hoveredElements) {
       if (element.classList.contains("cursor-click")) {
