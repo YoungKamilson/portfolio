@@ -115,7 +115,7 @@
             <p class="font-bold text-3xl">PORTRAIT</p>
          </div>
       </Card>
-      <a href="cv.pdf" class="col-span-4 row-span-11">
+      <a href="cv.pdf" class="col-span-4 row-span-11 cursor-clickt">
          <Card class="w-full h-full">
             <div class="relative w-full h-full">
                <p class="mt-auto font-bold text-2xl">My CV</p>
@@ -126,7 +126,7 @@
             </div>
          </Card>
       </a>
-      <NuxtLink to="/contact" class="col-span-4 row-span-6">
+      <NuxtLink to="/contact" class="col-span-4 row-span-6 cursor-click">
          <Card class="!border-white w-full h-full">
             <div class="w-full h-full flex flex-col relative">
                <p class="font-light text-base">
@@ -152,55 +152,3 @@
       <Socials class="col-span-4 row-span-3"></Socials>
    </main>
 </template>
-
-<script setup lang="ts">
-import gsap from "gsap"
-
-const { socials } = useAppConfig()
-
-const { $gsap } = useNuxtApp()
-
-// onMounted(() => {
-//    if (import.meta.server) return
-//    const box = document.querySelector("#icons-container")
-//    const content = document.querySelector("#icons")
-//    const icons = document.querySelectorAll(".animated-icon")
-
-//    if (!box || !content || !icons || !icons.length) return
-
-//    const tl = gsap.timeline({
-//       yoyo: true,
-//       repeat: -1,
-//       paused: true
-//    })
-
-//    tl.to(content, {
-//       x: content.scrollWidth * -1 * 0.7,
-//       duration: 5,
-//       ease: "sine"
-//    })
-
-//    box.addEventListener("mouseover", () => {
-//       tl.resume()
-//    })
-
-//    box.addEventListener("mouseout", () => {
-//       tl.pause()
-//    })
-
-//    icons.forEach((icon) => {
-//       const tl = gsap.timeline({
-//          scrollTrigger: {
-//             horizontal: true,
-//             trigger: content,
-//             start: "left center",
-//             end: "right center",
-//             scrub: true,
-//             markers: true
-//          }
-//       })
-
-//       tl.from(icon, { x: -100, scale: 0.5 }).to(icon, { x: 0, scale: 1 })
-//    })
-// })
-</script>

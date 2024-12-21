@@ -13,6 +13,12 @@ export default defineNuxtConfig({
          }
       }
    },
+   app: {
+      pageTransition: {
+         name: "slide-right",
+         mode: "out-in"
+      }
+   },
    tailwindcss: {
       cssPath: "~/assets/tailwind.css",
       config: {
@@ -42,7 +48,7 @@ export default defineNuxtConfig({
                   "marquee-reverse": "marquee-reverse 100s linear infinite"
                },
                cursor: {
-                  hover: "url('~/assets/hover_cursor.svg'), auto"
+                  click: "for gsap animation"
                }
             }
          }

@@ -43,7 +43,7 @@
          </template>
       </ProjectCard>
 
-      <NuxtLink to="/contact" class="col-span-4 row-span-5">
+      <NuxtLink to="/contact" class="col-span-4 row-span-5 cursor-click">
          <Card class="!border-white w-full h-full">
             <div class="w-full h-full flex flex-col relative">
                <p class="font-light text-base">Contact me</p>

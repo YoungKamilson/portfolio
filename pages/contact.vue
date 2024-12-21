@@ -1,6 +1,6 @@
 <template>
    <main class="grid grid-cols-6 grid-rows-3 min-h-[90vh] mt-8 gap-8">
-      <NuxtLink :to="socials.linkedin" class="col-span-2 row-span-3">
+      <NuxtLink :to="socials.linkedin" class="col-span-2 row-span-3 cursor-click">
          <Card class="flex flex-col w-full h-full overflow-clip">
             <img src="assets/circle.svg" aria-hidden class="absolute top-24 -left-16" />
             <p class="mt-auto font-bold text-6xl">LinkedIn</p>
@@ -8,7 +8,7 @@
          </Card>
       </NuxtLink>
 
-      <NuxtLink :to="'mailto:' + socials.email" class="col-span-2 row-span-3">
+      <NuxtLink :to="'mailto:' + socials.email" class="col-span-2 row-span-3 cursor-click">
          <Card class="flex flex-col w-full h-full overflow-clip">
             <img src="assets/circle.svg" aria-hidden class="absolute -left-16 -top-16" />
             <p class="mt-auto font-bold text-6xl">Email</p>
@@ -18,7 +18,7 @@
             </p>
          </Card>
       </NuxtLink>
-      <NuxtLink :to="socials.github" class="col-span-2 row-span-3">
+      <NuxtLink :to="socials.github" class="col-span-2 row-span-3 cursor-click">
          <Card class="flex flex-col w-full h-full overflow-clip">
             <img src="assets/circle.svg" aria-hidden class="absolute bottom-24 -right-16" />
             <p class="mt-auto font-bold text-6xl">GitHub</p>

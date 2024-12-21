@@ -4,10 +4,13 @@
 
       <div class="flex flex-col absolute p-6 z-10 h-full bg-gradient-to-t from-primary from-60% to-[#0b4a275d]">
          <div class="flex flex-row gap-3 mt-auto">
-            <NuxtLink v-if="github" :to="github" class="rounded-full border-[#006D4B] border-2 bg-[#002714] p-3"
+            <NuxtLink v-if="github" :to="github" class="cursor-click rounded-full border-[#006D4B] border-2 bg-[#002714] p-3"
                ><LucideGithub class="w-6 h-6"
             /></NuxtLink>
-            <NuxtLink v-if="projectUrl" :to="projectUrl" class="rounded-full border-[#006D4B] border-2 bg-[#002714] p-3"
+            <NuxtLink
+               v-if="projectUrl"
+               :to="projectUrl"
+               class="cursor-click rounded-full border-[#006D4B] border-2 bg-[#002714] p-3"
                ><LucideLink class="w-6 h-6"
             /></NuxtLink>
          </div>
