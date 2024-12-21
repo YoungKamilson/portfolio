@@ -20,12 +20,12 @@
                      class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
                   />
                   <img
-                     src="/assets/icons/Nuxt.svg"
+                     src="/assets/icons/nuxt.svg"
                      alt="Nuxt 3"
                      class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
                   />
                   <img
-                     src="/assets/icons/React.svg"
+                     src="/assets/icons/react.svg"
                      alt="React"
                      class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
                   />
@@ -94,6 +94,11 @@
                   <img
                      src="/assets/icons/postgres.svg"
                      alt="Postgres"
+                     class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
+                  />
+                  <img
+                     src="/assets/icons/prisma.svg"
+                     alt="Prisma"
                      class="opacity-50 grayscale hover:opacity-100 hover:scale-105 hover:grayscale-0 transition ease-in-out w-24 h-24 block"
                   />
                </div>
