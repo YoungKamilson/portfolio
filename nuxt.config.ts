@@ -22,7 +22,7 @@ export default defineNuxtConfig({
                   primary: "#08301A",
                   text: "#D9D9D9",
                   stroke: "#006D4B",
-                  background: "#030C07"
+                  background: "#05130b"
                },
                fontFamily: {
                   LexendDeca: ["Lexend Deca", "serif"]
