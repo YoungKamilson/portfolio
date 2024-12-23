@@ -67,8 +67,6 @@
 import { ref, onMounted } from "vue"
 import { gsap } from "gsap"
 
-const s = ref(null)
-
 let ctx: gsap.Context
 
 onMounted(() => {
@@ -82,35 +80,37 @@ onMounted(() => {
       return [line, circles[index]]
    })
 
-   const tl = gsap.timeline({
-      smoothChildTiming: true
-   })
-
-   for (const [line, circle] of linesWithCircles) {
-      const pathLength = line.getTotalLength()
-      line.style.strokeDasharray = `${pathLength}`
-      line.style.strokeDashoffset = `${pathLength}`
-
-      tl.to(line, {
-         strokeDashoffset: 0,
-         opacity: 1,
-         duration: 0.3,
-         ease: "power2.inOut"
+   ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+         smoothChildTiming: true
       })
 
-      if (circle) {
-         tl.to(
-            circle,
-            {
-               scale: 1,
-               opacity: 1,
-               duration: 0.3,
-               ease: "power2.in"
-            },
-            "=-0.6"
-         )
+      for (const [line, circle] of linesWithCircles) {
+         const pathLength = line.getTotalLength()
+         line.style.strokeDasharray = `${pathLength}`
+         line.style.strokeDashoffset = `${pathLength}`
+
+         tl.to(line, {
+            strokeDashoffset: 0,
+            opacity: 1,
+            duration: 0.3,
+            ease: "power2.inOut"
+         })
+
+         if (circle) {
+            tl.to(
+               circle,
+               {
+                  scale: 1,
+                  opacity: 1,
+                  duration: 0.3,
+                  ease: "power2.in"
+               },
+               "=-0.6"
+            )
+         }
       }
-   }
+   })
 })
 
 onUnmounted(() => {
