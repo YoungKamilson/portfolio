@@ -6,6 +6,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
+      class="resume-icon"
    >
       <!-- 1 -->
       <line class="line opacity-0" x1="279" y1="726" x2="279" y2="546" stroke="white" stroke-width="2" />
@@ -64,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue"
+import { onMounted } from "vue"
 import { gsap } from "gsap"
 
 let ctx: gsap.Context = gsap.context(() => {})
@@ -72,7 +73,6 @@ let ctx: gsap.Context = gsap.context(() => {})
 onMounted(() => {
    if (import.meta.server) return
 
-   console.log(ctx)
    const lines = Array.from(document.querySelectorAll(".line")) as SVGLineElement[]
 
    const circles = Array.from(document.querySelectorAll(".circle")) as SVGCircleElement[]
@@ -85,7 +85,8 @@ onMounted(() => {
 
    ctx.add(() => {
       tl = gsap.timeline({
-         smoothChildTiming: true
+         smoothChildTiming: true,
+         scrollTrigger: ".resume-icon"
       })
    })
 

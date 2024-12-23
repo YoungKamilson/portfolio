@@ -32,7 +32,11 @@
 
       <!-- tablet/latop/desktop -->
       <nav class="ml-auto gap-6 md:flex hidden">
-         <NuxtLink to="/" class="font-medium text-base relative group cursor-click">HOME</NuxtLink>
+         <NuxtLink to="/" class="font-medium text-base relative group cursor-click"
+            >HOME
+            <div class="absolute w-0.5 h-2 bg-text left-1/2 group-hover:opacity-100 opacity-0 transition-opacity"></div>
+            <div class="absolute mt-2 left-1/2 -translate-x-3 group-hover:opacity-100 opacity-0 transition-opacity">(H)</div>
+         </NuxtLink>
 
          <NuxtLink to="/projects" class="font-medium text-base relative group cursor-click"
             >PROJECTS

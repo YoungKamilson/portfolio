@@ -6,6 +6,10 @@
 
 <script setup lang="ts">
 import "~/assets/vanilla.css"
+import { ScrollTrigger } from "gsap/src/ScrollTrigger"
+import { gsap } from "gsap"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const router = useRouter()
 
