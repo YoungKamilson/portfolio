@@ -7,8 +7,8 @@
          class="h-96 md:col-span-1 xl:row-start-1 xl:h-full xl:row-span-6"
       >
          <template #background>
-            <img
-               src="assets/school.jpeg"
+            <NuxtImg
+               src="school.jpeg"
                alt="School website screenshot"
                class="w-full h-full object-cover absolute opacity-35"
             /> </template
@@ -22,11 +22,7 @@
          class="h-96 md:col-span-1 xl:h-full xl:row-span-4 xl:col-start-2 xl:row-start-1"
       >
          <template #background>
-            <img
-               src="assets/terminai.png"
-               alt="School website screenshot"
-               class="w-full h-full object-cover absolute opacity-35"
-            />
+            <NuxtImg src="terminai.png" alt="School website screenshot" class="w-full h-full object-cover absolute opacity-35" />
          </template>
       </ProjectCard>
 
@@ -38,7 +34,7 @@
       >
          <template #background
             ><div
-               class="w-full h-full object-cover absolute opacity-35 bg-[url(assets/klmat.jpeg)] bg-[-330px_-100px] md:bg-[-330px_-200px] bg-size-klmat"
+               class="w-full h-full object-cover absolute opacity-35 bg-[url(klmat.jpeg)] bg-[-330px_-100px] md:bg-[-330px_-200px] bg-size-klmat"
             />
          </template>
       </ProjectCard>
