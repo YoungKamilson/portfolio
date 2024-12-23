@@ -5,7 +5,7 @@
       </NuxtLink>
       <img src="assets/headerCircle.svg" class="absolute left-30 top-0 pointer-events-none md:block hidden" />
 
-      <NuxtLink to="/" class="h-full flex items-start justify-center cursor-click flex-col">
+      <NuxtLink to="/" class="h-full flex items-start justify-center cursor-click flex-col md:hidden">
          <span class="font-extralight text-base">KAMIL</span>
          <span class="font-medium">KUBICZEK</span>
       </NuxtLink>
