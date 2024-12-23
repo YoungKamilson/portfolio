@@ -67,11 +67,12 @@
 import { ref, onMounted } from "vue"
 import { gsap } from "gsap"
 
-let ctx: gsap.Context
+let ctx: gsap.Context = gsap.context(() => {})
 
 onMounted(() => {
    if (import.meta.server) return
 
+   console.log(ctx)
    const lines = Array.from(document.querySelectorAll(".line")) as SVGLineElement[]
 
    const circles = Array.from(document.querySelectorAll(".circle")) as SVGCircleElement[]
@@ -80,24 +81,30 @@ onMounted(() => {
       return [line, circles[index]]
    })
 
-   ctx = gsap.context(() => {
-      const tl = gsap.timeline({
+   let tl: gsap.core.Timeline
+
+   ctx.add(() => {
+      tl = gsap.timeline({
          smoothChildTiming: true
       })
+   })
 
-      for (const [line, circle] of linesWithCircles) {
-         const pathLength = line.getTotalLength()
-         line.style.strokeDasharray = `${pathLength}`
-         line.style.strokeDashoffset = `${pathLength}`
+   for (const [line, circle] of linesWithCircles) {
+      const pathLength = line.getTotalLength()
+      line.style.strokeDasharray = `${pathLength}`
+      line.style.strokeDashoffset = `${pathLength}`
 
+      ctx.add(() => {
          tl.to(line, {
             strokeDashoffset: 0,
             opacity: 1,
             duration: 0.3,
             ease: "power2.inOut"
          })
+      })
 
-         if (circle) {
+      if (circle) {
+         ctx.add(() => {
             tl.to(
                circle,
                {
@@ -108,13 +115,13 @@ onMounted(() => {
                },
                "=-0.6"
             )
-         }
+         })
       }
-   })
+   }
 })
 
 onUnmounted(() => {
-   ctx.revert()
+   if (import.meta.client && ctx) ctx.kill()
 })
 </script>
 
