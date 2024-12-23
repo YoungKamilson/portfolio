@@ -5,7 +5,7 @@ export default defineNuxtConfig({
    build: {
       transpile: ["gsap", "gsap/ScrollTrigger"]
    },
-   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt-lucide-icons"],
+   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt-lucide-icons", "@nuxt/image"],
    googleFonts: {
       families: {
          "Lexend Deca": {

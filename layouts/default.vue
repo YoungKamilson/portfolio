@@ -1,5 +1,7 @@
 <template>
-   <div class="bg-background cursor-none w-full min-h-screen text-text px-32 py-11 font-LexendDeca overflow-x-hidden">
+   <div
+      class="bg-background cursor-none w-full min-h-screen text-text 2xl:px-32 min-[2000px]:px-[15vw] lg:px-16 px-6 py-11 font-LexendDeca overflow-x-hidden"
+   >
       <div ref="cursor" class="absolute z-50">
          <div class="dot-cursor">
             <div class="dot-cursor-center" v-if="showHoverCursor" />
